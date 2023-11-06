@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputForm = ({ handleSubmitGuess }) => {
+const InputForm = ({ handleSubmitGuess, gameResult }) => {
   const [tentativeGuess, setTentativeGuess] = React.useState("");
 
   const handleFormSubmit = (event) => {
@@ -16,6 +16,7 @@ const InputForm = ({ handleSubmitGuess }) => {
       <label htmlFor="guess-input">Enter guess: </label>
       <input
         required
+        aria-disabled={!gameResult}
         id="guess-input"
         type="text"
         value={tentativeGuess}
