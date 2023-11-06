@@ -42,7 +42,7 @@ function Game() {
         gameResult={gameResult}
       />
       {!!gameResult && gameResult === "win" ? (
-        <HappyBanner guesses={guesses} />
+        <HappyBanner guesses={guesses.length} />
       ) : (
         ""
       )}
